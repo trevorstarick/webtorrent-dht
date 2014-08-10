@@ -7,6 +7,9 @@ A Distributed Hash Table framework for NodeJS and Javascript ES5/6
 ## Project Goal
 Using [WebSockets](http://socket.io/)/[WebRTC](http://www.webrtc.org/) and [IndexedDB](https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API)/[LevelDB](https://code.google.com/p/leveldb/) to create a mesh network of clients without the need of servers. 
 
+## Custom ChunkSize
+Min of 32kB and Max of 16MB. Must be a byte size to the power of 2. Initial seed/client list will send chunksize, number of files, and size of each file. This will allow the client to partition space for each file and know how chunk distribution and partitioning should be done and preallocate said space for the lookup.
+
 ## Database Structure
 ```
 ┌── chunk0
