@@ -32,7 +32,7 @@ Min of 32kB and Max of 16MB. Must be a byte size to the power of 2. Initial seed
 ```
 
 ### Requesting Data
-Lookup for chunkX and it returns a list of clients who have broadcasted they have finished downloading said chunk. You would then request from one or more of the clients "Can I have chunkX" and wait for the first response. The first response would generaly be the fastest connection due to location geographically or bandwith/speed. Once you finish fetching chunkX from clientY you would callback with a broadcast declaring that you have gotten chunkX and are ready to upload.
+Lookup for chunkX and it returns a list of clients who have announced they have finished downloading said chunk. You would then request from one or more of the clients "Can I have chunkX" and wait for the first response. The first response would generaly be the fastest connection due to location geographically or bandwith/speed. Once you finish fetching chunkX from clientY you would callback with a broadcast declaring that you have gotten chunkX, it is valid and are ready to upload.
 
 ## Links
 - [Kademlia](https://en.wikipedia.org/wiki/Kademlia)
